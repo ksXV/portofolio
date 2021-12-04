@@ -18,5 +18,8 @@
   "homepage": "https://github.com/ksXV/portofolio#readme",
   "devDependencies": {
     "sass": "^1.44.0"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1"
   }
 }

@@ -1,8 +1,9 @@
 $bg-color: rgba(90, 3, 86, 1);
-$font-stack-one: Arial, Helvetica, sans-serif;
+$font-stack-one: "Nunito Sans", sans-serif;
 $font-stack-two: "Poppins", sans-serif;
-$primary-color: rgb(15, 15, 15);
+$black-color: rgb(15, 15, 15);
 $white-color: rgb(233, 233, 233);
+$purple-color: rgb(152, 7, 172);
 @keyframes navLinksFade {
   from {
     opacity: 0;
@@ -24,6 +25,7 @@ body {
   font-family: $font-stack-one;
   line-height: 1.6;
   font-size: 1em;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -31,10 +33,12 @@ a {
 header {
   position: sticky;
   top: 0;
+  animation: fadeInLeftBig;
+  animation-duration: 0.7s;
 }
 .dropdown {
   .burger {
-    background-color: $primary-color;
+    background-color: $purple-color;
     position: absolute;
     z-index: 1;
     width: 4em;
@@ -64,10 +68,10 @@ header {
     }
   }
   .nav {
-    background-color: $primary-color;
+    background-color: $purple-color;
     min-width: 150px;
-    display: flex;
     position: absolute;
+    display: flex;
     left: 0px;
     height: 16em;
     border-radius: 10px;
@@ -126,33 +130,77 @@ header {
   display: flex;
 }
 .align-left {
-  display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin: 0 7em 0 0;
+  margin: 0 7em 0;
+}
+.presentation-article {
+  display: flex;
+  height: 40rem;
+  align-items: center;
+  justify-content: flex-end;
 }
 .presentation-text {
   h1 {
-    color: $white-color;
+    color: $black-color;
     font-family: $font-stack-two;
-    font-size: 3.5em;
+    font-size: 4em;
+    font-weight: 600;
+    animation: backInRight ease-out;
+    animation-duration: 1.3s;
     span {
-      color: $primary-color;
+      color: $purple-color;
+      font-weight: 500;
+      font-family: $font-stack-two;
     }
   }
   h2 {
-    font-size: 3.5em;
     color: $white-color;
+    font-size: 3.5em;
     font-family: $font-stack-two;
+    animation: backInRight ease-out;
+    animation-duration: 1.5s;
   }
 }
 .w-100 {
   width: 100%;
 }
-.presentation-article {
-  display: flex;
-  height: 90vh;
-  align-items: center;
-  justify-content: flex-end;
-}
 // USE ANIMATIONS FOR TEXT
+.about-me-article {
+  width: 100%;
+  height: 28em;
+  background-color: $black-color;
+  color: $white-color;
+  margin: auto;
+  animation: fadeInUp;
+  animation-duration: 0.7s;
+  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
+  justify-content: center;
+  flex-direction: column;
+  button {
+    align-self: center;
+    width: 7rem;
+    height: 2rem;
+    margin: 1em;
+    border: 1px solid white;
+    background-color: $black-color;
+    color: $white-color;
+    border-radius: 1px;
+  }
+}
+.about-me-article-text {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    padding: 0 1em 0.8em 1em;
+    font-size: 2em;
+    font-family: $font-stack-two;
+  }
+  h2 {
+    text-align: center;
+    padding: 1em 4em;
+    font-size: 1.6em;
+    font-family: $font-stack-two;
+  }
+}

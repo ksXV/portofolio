@@ -5,7 +5,6 @@ const dropdownSlide = () => {
   //Toggle nav
   btn.addEventListener("click", () => {
     nav.classList.toggle("nav-active");
-
     //Animate links
     navLinks.forEach((link, index) => {
       if (link.style.animation) {

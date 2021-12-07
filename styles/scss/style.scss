@@ -2,7 +2,7 @@ $bg-color: rgba(90, 3, 86, 1);
 $font-stack-one: "Nunito Sans", sans-serif;
 $font-stack-two: "Poppins", sans-serif;
 $black-color: rgb(15, 15, 15);
-$white-color: rgb(233, 233, 233);
+$white-color: rgb(211, 211, 211);
 $purple-color: rgb(152, 7, 172);
 @keyframes navLinksFade {
   from {
@@ -40,7 +40,7 @@ header {
   .burger {
     background-color: $purple-color;
     position: absolute;
-    z-index: 1;
+    z-index: 99;
     width: 4em;
     height: 4em;
     border-radius: 0% 10% 75% 10%;
@@ -48,7 +48,7 @@ header {
     div {
       height: 4px;
       background-color: $white-color;
-      margin: 3px 0 5px 0.8em;
+      margin: 3px 0 3px 0.8em;
       border-radius: 25px;
       transition: 0.3s;
     }
@@ -86,6 +86,7 @@ header {
       width: inherit;
       height: inherit;
       margin: auto;
+      font-family: $font-stack-two;
       li {
         height: 17%;
         opacity: 0;
@@ -93,10 +94,6 @@ header {
           color: $white-color;
         }
       }
-    }
-
-    a {
-      color: #fff;
     }
   }
   &:hover {
@@ -110,14 +107,14 @@ header {
 }
 .toggle {
   .line1 {
-    transform: rotate(45deg) translate(8px, 9px);
+    transform: rotate(45deg) translate(5px, 9px);
     width: 30px !important;
   }
   .line2 {
     opacity: 0;
   }
   .line3 {
-    transform: rotate(-45deg) translate(8px, -9px);
+    transform: rotate(-45deg) translate(5px, -9px);
     width: 30px !important;
   }
 }
@@ -143,7 +140,6 @@ header {
 .presentation-text {
   h1 {
     color: $black-color;
-    font-family: $font-stack-two;
     font-size: 4em;
     font-weight: 600;
     animation: backInRight ease-out;
@@ -151,19 +147,33 @@ header {
     span {
       color: $purple-color;
       font-weight: 500;
-      font-family: $font-stack-two;
     }
   }
   h2 {
     color: $white-color;
     font-size: 3.5em;
-    font-family: $font-stack-two;
     animation: backInRight ease-out;
     animation-duration: 1.5s;
   }
 }
 .w-100 {
   width: 100%;
+}
+.button {
+  width: 7rem;
+  height: 2rem;
+  border: 1px solid $white-color;
+  background: linear-gradient(-45deg, $black-color 50%, $white-color 50%);
+  background-size: 230% 100%;
+  background-position: right bottom;
+  color: $white-color;
+  border-radius: 1px;
+  transition: all 0.25s ease-in;
+  &:hover {
+    border: 1px solid $black-color;
+    color: $black-color;
+    background-position: left bottom;
+  }
 }
 // USE ANIMATIONS FOR TEXT
 .about-me-article {
@@ -177,15 +187,11 @@ header {
   clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
   justify-content: center;
   flex-direction: column;
-  button {
+  a {
     align-self: center;
-    width: 7rem;
-    height: 2rem;
-    margin: 1em;
-    border: 1px solid white;
-    background-color: $black-color;
-    color: $white-color;
-    border-radius: 1px;
+    button {
+      margin: 1em;
+    }
   }
 }
 .about-me-article-text {
@@ -195,12 +201,46 @@ header {
   h1 {
     padding: 0 1em 0.8em 1em;
     font-size: 2em;
-    font-family: $font-stack-two;
   }
   h2 {
     text-align: center;
     padding: 1em 4em;
     font-size: 1.6em;
-    font-family: $font-stack-two;
+  }
+}
+.grid {
+  display: grid;
+}
+.work-articles {
+  margin: 10em 0;
+  gap: 7em;
+  .work-article {
+    height: 85vh;
+    background-color: $white-color;
+    display: flex;
+    flex-direction: row;
+    div {
+      align-self: center;
+      justify-self: flex-start;
+      margin: 1em;
+      .text-wrapper {
+        align-self: flex-start;
+        flex-direction: column;
+      }
+      .image-container {
+        width: 34em;
+        height: 20em;
+        border: 1px solid $black-color;
+        .image {
+          max-width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .button-wrapper {
+        align-self: flex-end;
+        flex-direction: row;
+      }
+    }
   }
 }

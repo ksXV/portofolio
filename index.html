@@ -34,8 +34,8 @@
         <nav class="nav">
           <ul class="flexbox nav-links">
             <li><a href="#about-me">ABOUT ME</a></li>
-            <li><a href="#">WORK</a></li>
-            <li><a href="#">CONTACT ME</a></li>
+            <li><a href="#work">WORK</a></li>
+            <li><a href="#contact-me">CONTACT ME</a></li>
           </ul>
         </nav>
         <button id="btn" class="burger flexbox wrapper-dropdown">
@@ -51,7 +51,10 @@
         <h2>Front end developer</h2>
       </div>
     </article>
-    <article id="about-me" class="flexbox about-me-article animate__animated">
+    <article
+      id="about-me"
+      class="flexbox article about-me-article animate__animated"
+    >
       <div class="about-me-article-text flexbox animate__animated">
         <h1>About me</h1>
         <h2>
@@ -64,11 +67,11 @@
           mollit anim id est laborum.
         </h2>
       </div>
-      <a href=""><button class="button">RESUME</button></a>
+      <a href=""><button class="white-button button">RESUME</button></a>
     </article>
     <article id="work" class="work-articles grid">
-      <article class="work-article w-100 flexbox animate__animated">
-        <div class="flexbox">
+      <article class="article work-article w-100 flexbox animate__animated">
+        <div class="grid work-wrapper">
           <div class="flexbox text-wrapper">
             <h1>Project title 1</h1>
             <h2>
@@ -79,30 +82,72 @@
               volutpat.
             </h2>
           </div>
+          <div class="image-container">
+            <img class="image" src="images/testimage.jpg" alt="project image" />
+          </div>
           <div class="flexbox button-wrapper">
             <button class="button">Live View</button>
             <button class="button">Code</button>
           </div>
+        </div>
+      </article>
+      <article
+        class="
+          article
+          even-article
+          work-article
+          w-100
+          flexbox
+          animate__animated
+        "
+      >
+        <div class="grid work-wrapper">
+          <div class="flexbox text-wrapper">
+            <h1>Project title 2</h1>
+            <h2>
+              Fusce tempus id quam eget placerat. Fusce suscipit orci ac dolor
+              bibendum, sit amet gravida est accumsan. Vestibulum ante ipsum
+              primis in faucibus orci luctus et ultrices posuere cubilia curae;
+              Maecenas facilisis velit sit amet pulvinar egestas. Aliquam erat
+              volutpat.
+            </h2>
+          </div>
           <div class="image-container">
             <img class="image" src="images/testimage.jpg" alt="project image" />
           </div>
+          <div class="flexbox button-wrapper">
+            <button class="button">Live View</button>
+            <button class="button">Code</button>
+          </div>
         </div>
       </article>
-      <article class="work-article w-100 flexbox animate__animated">
-        <div>
-          <h1>Project title 2</h1>
-          <h2>
-            In iaculis libero leo, ac varius ante pretium nec. Sed ut hendrerit
-            dui. Ut blandit tortor eget pulvinar ullamcorper. Pellentesque
-            ullamcorper, purus at vestibulum luctus, dui justo tempus risus, et
-            efficitur felis sapien ut ipsum. Ut mollis felis neque, sit amet
-            accumsan metus dapibus sit amet.
-          </h2>
-          <button class="button">Live View</button>
-          <button class="button">Code</button>
+      <article class="article work-article w-100 flexbox animate__animated">
+        <div class="grid work-wrapper">
+          <div class="flexbox text-wrapper">
+            <h1>Project title 3</h1>
+            <h2>
+              Fusce tempus id quam eget placerat. Fusce suscipit orci ac dolor
+              bibendum, sit amet gravida est accumsan. Vestibulum ante ipsum
+              primis in faucibus orci luctus et ultrices posuere cubilia curae;
+              Maecenas facilisis velit sit amet pulvinar egestas. Aliquam erat
+              volutpat.
+            </h2>
+          </div>
+          <div class="image-container">
+            <img class="image" src="images/testimage.jpg" alt="project image" />
+          </div>
+          <div class="flexbox button-wrapper">
+            <button class="button">Live View</button>
+            <button class="button">Code</button>
+          </div>
         </div>
       </article>
     </article>
+    <article id="contact-me" class="article contact-me-article flexbox">
+      <h1>Contact me for work!</h1>
+      <button class="white-button button">Send me a email here</button>
+    </article>
+    <footer class="footer w-100">[footer content]</footer>
   </body>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

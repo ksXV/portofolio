@@ -24,7 +24,7 @@ body {
   background-color: $bg-color;
   font-family: $font-stack-one;
   line-height: 1.6;
-  font-size: 1em;
+  font-size: 0.8em;
   overflow-x: hidden;
 }
 a {
@@ -41,8 +41,8 @@ header {
     background-color: $purple-color;
     position: absolute;
     z-index: 99;
-    width: 4em;
-    height: 4em;
+    width: 5em;
+    height: 5em;
     border-radius: 0% 10% 75% 10%;
     border: 0;
     div {
@@ -87,9 +87,14 @@ header {
       height: inherit;
       margin: auto;
       font-family: $font-stack-two;
+      font-size: 1.05em;
+      transition: all 0.2s ease-in-out;
       li {
         height: 17%;
         opacity: 0;
+        &:hover {
+          font-size: 1.1em;
+        }
         a {
           color: $white-color;
         }
@@ -133,14 +138,14 @@ header {
 }
 .presentation-article {
   display: flex;
-  height: 40rem;
+  height: 110vh;
   align-items: center;
   justify-content: flex-end;
 }
 .presentation-text {
   h1 {
     color: $black-color;
-    font-size: 4em;
+    font-size: 5em !important;
     font-weight: 600;
     animation: backInRight ease-out;
     animation-duration: 1.3s;
@@ -151,7 +156,7 @@ header {
   }
   h2 {
     color: $white-color;
-    font-size: 3.5em;
+    font-size: 4.5em !important;
     animation: backInRight ease-out;
     animation-duration: 1.5s;
   }
@@ -164,27 +169,27 @@ header {
   height: 2rem;
   border: 1px solid $white-color;
   background: linear-gradient(-45deg, $black-color 50%, $white-color 50%);
-  background-size: 230% 100%;
-  background-position: right bottom;
+  background-size: 230% 100% !important;
+  background-position: right bottom !important;
   color: $white-color;
   border-radius: 1px;
-  transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in !important;
   &:hover {
     border: 1px solid $black-color;
     color: $black-color;
-    background-position: left bottom;
+    background-position: left bottom !important;
   }
 }
-// USE ANIMATIONS FOR TEXT
-.about-me-article {
+.article {
   width: 100%;
-  height: 28em;
+  height: 80vh;
+}
+.about-me-article {
   background-color: $black-color;
   color: $white-color;
   margin: auto;
   animation: fadeInUp;
   animation-duration: 0.7s;
-  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
   justify-content: center;
   flex-direction: column;
   a {
@@ -200,36 +205,41 @@ header {
   justify-content: center;
   h1 {
     padding: 0 1em 0.8em 1em;
-    font-size: 2em;
+    font-size: 2.5em;
   }
   h2 {
     text-align: center;
     padding: 1em 4em;
-    font-size: 1.6em;
+    font-size: 1.8em;
   }
 }
 .grid {
   display: grid;
 }
 .work-articles {
-  margin: 10em 0;
-  gap: 7em;
+  margin-top: 30em;
+  gap: 10em;
   .work-article {
-    height: 85vh;
     background-color: $white-color;
     display: flex;
     flex-direction: row;
-    div {
-      align-self: center;
-      justify-self: flex-start;
-      margin: 1em;
+    .work-wrapper {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem 2rem;
+      margin: 4em;
       .text-wrapper {
-        align-self: flex-start;
         flex-direction: column;
+        h1 {
+          font-size: 2.5em;
+          padding-bottom: 1em;
+        }
+        h2 {
+          font-size: 1.8em;
+        }
       }
       .image-container {
-        width: 34em;
-        height: 20em;
+        width: 100%;
+        height: 100%;
         border: 1px solid $black-color;
         .image {
           max-width: 100%;
@@ -238,9 +248,51 @@ header {
         }
       }
       .button-wrapper {
-        align-self: flex-end;
         flex-direction: row;
+        width: 40%;
+        justify-content: space-around;
       }
     }
   }
+}
+.even-article {
+  .work-wrapper {
+    .text-wrapper {
+      grid-column: 2/3;
+    }
+    .image-container {
+      grid-row: 1/2;
+    }
+    .button-wrapper {
+      grid-column: 2/3;
+      justify-self: end;
+    }
+  }
+}
+.white-button {
+  background: linear-gradient(-45deg, $white-color 50%, $black-color 50%);
+  color: $black-color;
+  &:hover {
+    color: $white-color;
+    border: 1px $white-color solid;
+  }
+}
+.contact-me-article {
+  margin-top: 20em;
+  background-color: $black-color;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  button {
+    width: 13%;
+  }
+  h1 {
+    color: $white-color;
+  }
+}
+.footer {
+  margin-top: 5em;
+  height: 18vh;
+  background-color: rgb(37, 34, 34);
+  color: $white-color;
 }
